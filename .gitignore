@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+Sandbox/node_modules
+Sandbox/.pnp
+Sandbox/.pnp.*
+Sandbox/.yarn/*
+Sandbox/!.yarn/patches
+Sandbox/!.yarn/plugins
+Sandbox/!.yarn/releases
+Sandbox/!.yarn/versions
+
+# testing
+Sandbox/coverage
+
+# next.js
+Sandbox/.next/
+Sandbox/out/
+
+# production
+/build
+
+# misc
+*.DS_Store
+*.pem
+
+# debug
+Sandbox/npm-debug.log*
+Sandbox/yarn-debug.log*
+Sandbox/yarn-error.log*
+Sandbox/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+*.env*
+
+# vercel
+Sandbox/.vercel
+
+# typescript
+Sandbox/.tsbuildinfo
+Sandbox/next-env.d.ts

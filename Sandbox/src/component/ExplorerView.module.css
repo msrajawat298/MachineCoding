@@ -1,0 +1,31 @@
+.explorer-container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    background-color: #f9f9f9;
+}
+
+.folder {
+  margin-left: 15px;
+}
+
+.folder-title {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  transition: background 0.3s;
+}
+
+.folder-title:hover {
+  background-color: #e0e0e0;
+}
+
+.folder-content {
+  margin-left: 15px;
+}
+
+.file {
+  padding: 5px;
+  font-size: 14px;
+}
