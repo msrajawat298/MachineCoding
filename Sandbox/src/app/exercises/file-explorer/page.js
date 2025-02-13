@@ -1,8 +1,8 @@
 import { getSourceCode } from "@/component/CodeBlock/CodeBlockServer";
-import FileExplorer from "./FileExplorer";
+import ExerciseView from "@/component/ExerciseView";
+import ExplorerView from "@/component/ExplorerView/";
 
 export default async function FileExplorerPage() {
   const sourceCode = await getSourceCode("src/component/ExplorerView/index.jsx");
-
-  return <FileExplorer sourceCode={sourceCode} />;
+  return <ExerciseView title="File Explorer" DemoComponent={ExplorerView} sourceCode={sourceCode} />;
 }

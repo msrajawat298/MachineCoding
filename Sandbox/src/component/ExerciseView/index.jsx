@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 import CodeBlock from "@/component/CodeBlock";
-import ExplorerView from "@/component/ExplorerView/";
 
-const FileExplorer = ({ sourceCode }) => {
+const ExerciseView = ({ title, DemoComponent, sourceCode }) => {
   const [view, setView] = useState("demo"); // 'demo' or 'code'
 
   return (
     <div className="container-fluid py-4">
-      <h1 className="mb-4">File Explorer</h1>
+      <h1 className="mb-4">{title}</h1>
 
       <div className="d-flex justify-content-center mb-4">
         <div className="btn-group" role="group">
@@ -29,7 +28,7 @@ const FileExplorer = ({ sourceCode }) => {
       </div>
 
       <div className="row justify-content-center">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <div className="card">
             <div className="card-header">
               <h5 className="mb-0">{view === "demo" ? "Demo" : "Source Code"}</h5>
@@ -37,7 +36,7 @@ const FileExplorer = ({ sourceCode }) => {
             <div className="card-body p-0">
               {view === "demo" ? (
                 <div className="p-3">
-                  <ExplorerView />
+                  <DemoComponent />
                 </div>
               ) : (
                 <div className="code-container">
@@ -52,4 +51,4 @@ const FileExplorer = ({ sourceCode }) => {
   );
 };
 
-export default FileExplorer;
+export default ExerciseView;
