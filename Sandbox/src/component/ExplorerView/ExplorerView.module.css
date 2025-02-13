@@ -29,3 +29,13 @@
   padding: 5px;
   font-size: 14px;
 }
+
+.code-container {
+  max-height: 600px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+.code-container pre {
+  margin: 0 !important;
+}
