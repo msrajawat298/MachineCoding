@@ -3,7 +3,7 @@
 import { useState } from "react";
 import CodeBlock from "@/component/CodeBlock";
 
-const ExerciseView = ({ title, DemoComponent, sourceCode }) => {
+const ExerciseView = ({ title, DemoComponent, sourceCode, demoProps }) => {
   const [view, setView] = useState("demo"); // 'demo' or 'code'
 
   return (
@@ -36,7 +36,7 @@ const ExerciseView = ({ title, DemoComponent, sourceCode }) => {
             <div className="card-body p-0">
               {view === "demo" ? (
                 <div className="p-3">
-                  <DemoComponent />
+                  <DemoComponent {...demoProps} />
                 </div>
               ) : (
                 <div className="code-container">
