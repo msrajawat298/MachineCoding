@@ -8,7 +8,7 @@ export default function TodoApp() {
   const [text, setText] = useState("");
   const STORAGE_KEY = "todo-app-items";
 
-  
+
 
   useEffect(() => {
     try {
@@ -40,7 +40,7 @@ export default function TodoApp() {
 
   const removeTodo = (id) => setItems((prev) => prev.filter((it) => it.id !== id));
 
-  
+
 
   return (
     <div>
@@ -70,7 +70,8 @@ export default function TodoApp() {
       </div>
 
       {items.length === 0 ? (
-        <div className="text-muted">No todos yet</div>
+        <div style={{ color: 'var(--text-secondary)' }}>No todos yet</div>
+
       ) : (
         <ul className="list-group">
           {items.map((item) => (

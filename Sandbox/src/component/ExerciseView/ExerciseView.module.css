@@ -1,0 +1,73 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.controls {
+  display: flex;
+  background: var(--surface);
+  padding: 0.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.controlBtn {
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.controlBtn:hover {
+  color: var(--foreground);
+}
+
+.controlBtnActive {
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.controlBtnActive:hover {
+  color: white;
+}
+
+.content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 600px;
+  box-shadow: var(--shadow-lg);
+}
+
+.demoContainer {
+  padding: 2rem;
+  height: 100%;
+  background: var(--background); /* Use darker background for demo area to make component pop */
+}
+
+.codeContainer {
+  height: 100%;
+  overflow: auto;
+  background: #1e1e1e; /* VS Code dark theme bg */
+}

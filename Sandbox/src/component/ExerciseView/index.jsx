@@ -2,53 +2,52 @@
 
 import { useState } from "react";
 import CodeBlock from "@/component/CodeBlock";
+import styles from "./ExerciseView.module.css";
+import Link from "next/link";
 
 const ExerciseView = ({ title, DemoComponent, sourceCode, demoProps }) => {
   const [view, setView] = useState("demo"); // 'demo' or 'code'
 
   return (
-    <div className="container-fluid py-4">
-      <h1 className="mb-4">{title}</h1>
+    <div className={styles.container}>
+      <div className="mb-4">
+        <Link href="/exercises" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+          &larr; Back to Exercises
+        </Link>
+        <div className={styles.header}>
+          <h1 className={styles.title}>{title}</h1>
 
-      <div className="d-flex justify-content-center mb-4">
-        <div className="btn-group" role="group">
-          <button
-            className={`btn ${view === "demo" ? "btn-primary" : "btn-outline-primary"}`}
-            onClick={() => setView("demo")}
-          >
-            Demo View
-          </button>
-          <button
-            className={`btn ${view === "code" ? "btn-primary" : "btn-outline-primary"}`}
-            onClick={() => setView("code")}
-          >
-            Source Code
-          </button>
+          <div className={styles.controls}>
+            <button
+              className={`${styles.controlBtn} ${view === "demo" ? styles.controlBtnActive : ""}`}
+              onClick={() => setView("demo")}
+            >
+              Live Demo
+            </button>
+            <button
+              className={`${styles.controlBtn} ${view === "code" ? styles.controlBtnActive : ""}`}
+              onClick={() => setView("code")}
+            >
+              Source Code
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className="row justify-content-center">
-        <div className="col-md-12">
-          <div className="card">
-            <div className="card-header">
-              <h5 className="mb-0">{view === "demo" ? "Demo" : "Source Code"}</h5>
-            </div>
-            <div className="card-body p-0">
-              {view === "demo" ? (
-                <div className="p-3">
-                  <DemoComponent {...demoProps} />
-                </div>
-              ) : (
-                <div className="code-container">
-                  <CodeBlock sourceCode={sourceCode} />
-                </div>
-              )}
-            </div>
+      <div className={styles.content}>
+        {view === "demo" ? (
+          <div className={styles.demoContainer}>
+            <DemoComponent {...demoProps} />
           </div>
-        </div>
+        ) : (
+          <div className={styles.codeContainer}>
+            <CodeBlock sourceCode={sourceCode} />
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default ExerciseView;
+

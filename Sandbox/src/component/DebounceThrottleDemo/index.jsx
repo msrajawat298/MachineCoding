@@ -39,7 +39,8 @@ export function DebounceDemo({ items: externalItems, wait = 500 }) {
     <div>
       <label className="form-label">Debounced filter ({wait}ms)</label>
       <input className="form-control mb-1" value={input} onChange={handleChange} />
-      <div className="small text-muted">Applied calls: {calls}</div>
+      <div className="small" style={{ color: 'var(--text-secondary)' }}>Applied calls: {calls}</div>
+
       <ul className="list-group mt-2">
         {filtered.map((it) => (
           <li key={it.id} className="list-group-item">{it.text}</li>
@@ -72,7 +73,8 @@ export function ThrottleDemo({ items: externalItems, wait = 500 }) {
     <div>
       <label className="form-label">Throttled filter ({wait}ms)</label>
       <input className="form-control mb-1" value={input} onChange={handleChange} />
-      <div className="small text-muted">Applied calls: {calls}</div>
+      <div className="small" style={{ color: 'var(--text-secondary)' }}>Applied calls: {calls}</div>
+
       <ul className="list-group mt-2">
         {filtered.map((it) => (
           <li key={it.id} className="list-group-item">{it.text}</li>

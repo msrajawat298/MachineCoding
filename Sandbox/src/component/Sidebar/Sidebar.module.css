@@ -1,0 +1,45 @@
+.sidebar {
+  width: 280px;
+  min-height: calc(100vh - 4rem); /* Subtract header height */
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navLink {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+  background: var(--surface-hover);
+  color: var(--foreground);
+}
+
+.navLinkActive {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  font-weight: 500;
+}

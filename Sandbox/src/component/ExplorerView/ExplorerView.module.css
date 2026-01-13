@@ -1,41 +1,63 @@
-.explorer-container {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 250px;
-    background-color: #f9f9f9;
+.explorerContainer {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--surface);
+  color: var(--foreground);
 }
 
 .folder {
-  margin-left: 15px;
+  margin-left: 0.5rem;
 }
 
-.folder-title {
-  font-weight: bold;
+.folderTitle {
+  font-weight: 600;
   cursor: pointer;
-  padding: 5px;
-  transition: background 0.3s;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--foreground);
 }
 
-.folder-title:hover {
-  background-color: #e0e0e0;
+.folderTitle:hover {
+  background-color: var(--surface-hover);
+  color: var(--primary);
 }
 
-.folder-content {
-  margin-left: 15px;
+.folderContent {
+  margin-left: 1rem;
+  border-left: 1px solid var(--border);
+  padding-left: 0.5rem;
 }
 
 .file {
-  padding: 5px;
-  font-size: 14px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
 }
 
-.code-container {
+.file:hover {
+  color: var(--foreground);
+  background-color: var(--surface-hover);
+}
+
+.codeContainer {
   max-height: 600px;
   overflow-y: auto;
   background-color: #1e1e1e;
+  border-radius: var(--radius-md);
 }
 
-.code-container pre {
+.codeContainer pre {
   margin: 0 !important;
 }

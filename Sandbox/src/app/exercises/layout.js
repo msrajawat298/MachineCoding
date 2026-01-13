@@ -2,14 +2,17 @@ import Sidebar from "@/component/Sidebar";
 
 export default function ExercisesLayout({ children }) {
   return (
-    <div className="d-flex">
+    <div style={{ display: 'flex', minHeight: 'calc(100vh - 4rem)' }}>
       {/* Sidebar */}
-      <Sidebar />
+      <div style={{ flexShrink: 0 }}>
+        <Sidebar />
+      </div>
       
       {/* Main Content */}
-      <div className="main-content" style={{ width: "80%" }}>
-        <div className="p-4">{children}</div>
+      <div style={{ flex: 1, overflow: 'hidden' }}>
+        {children}
       </div>
     </div>
   );
 }
+
