@@ -35,7 +35,7 @@ export const metadata = {
     title: "VitableTech | Machine Coding Sandbox",
     description:
       "Practice real-world frontend interview questions with an interactive sandbox from VitableTech.",
-    url: "https://vitabletech.dev",
+    url: "https://sandbox.vitabletech.in",
     siteName: "VitableTech Sandbox",
     images: [
       {

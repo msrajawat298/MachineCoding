@@ -3,7 +3,7 @@ export default function Head() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "VitableTech Sandbox",
-    "url": "https://vitabletech.dev",
+    "url": "https://sandbox.vitabletech.in",
     "description": "Practice real-world frontend interview questions with an interactive sandbox from VitableTech.",
     "publisher": {
       "@type": "Organization",
@@ -13,7 +13,7 @@ export default function Head() {
 
   return (
     <>
-      <link rel="canonical" href="https://vitabletech.dev" />
+      <link rel="canonical" href="https://sandbox.vitabletech.in" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
