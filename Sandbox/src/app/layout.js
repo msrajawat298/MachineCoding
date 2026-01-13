@@ -15,8 +15,61 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "VitableTech | Machine Coding Sandbox",
-  description: "Empowering Businesses Through Open Source Innovation. Practice machine coding interview questions.",
+  title: {
+    default: "VitableTech | Machine Coding Sandbox",
+    template: "%s | VitableTech",
+  },
+  description:
+    "Practice real-world frontend interview questions with an interactive sandbox from VitableTech.",
+  keywords: [
+    "machine coding",
+    "frontend interview",
+    "react",
+    "next.js",
+    "coding sandbox",
+    "vitabletech",
+  ],
+  authors: [{ name: "VitableTech" }],
+  viewport: "width=device-width, initial-scale=1",
+  openGraph: {
+    title: "VitableTech | Machine Coding Sandbox",
+    description:
+      "Practice real-world frontend interview questions with an interactive sandbox from VitableTech.",
+    url: "https://vitabletech.dev",
+    siteName: "VitableTech Sandbox",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "VitableTech Sandbox",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VitableTech | Machine Coding Sandbox",
+    description:
+      "Practice real-world frontend interview questions with an interactive sandbox from VitableTech.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

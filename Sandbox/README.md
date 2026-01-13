@@ -65,3 +65,14 @@ This project is private and not intended for public distribution.
 
 **Author**
 Mayank Singh Kushwah
+
+## SEO changes made
+
+- Added site-wide metadata in `src/app/layout.js` (title template, description, keywords, Open Graph, Twitter card, robots, icons).
+- Injected JSON-LD structured data and a canonical link via `src/app/head.js`.
+- Added `public/robots.txt` and `public/sitemap.xml` including key routes so search engines can crawl the site.
+
+Notes:
+- Replace `https://vitabletech.dev` in `src/app/layout.js`, `src/app/head.js`, and `public/sitemap.xml` with your production domain before deploying.
+- Add an `og-image.png` at `public/og-image.png` (1200x630) to improve social shares.
+- Run Lighthouse and `pnpm build` to verify no regressions.
