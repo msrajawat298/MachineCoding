@@ -12,7 +12,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoHighlight}>Vitable</span>Tech
+          <img src="/logo.svg" alt="VitableTech Logo" height="32" style={{ height: '32px' }} />
         </Link>
         
         <nav className={styles.navLinks}>
@@ -24,6 +24,9 @@ export default function Header() {
           </Link>
           <Link href="/about" className={`${styles.navLink} ${isActive('/about')}`}>
             About
+          </Link>
+          <Link href="/guide" className={`${styles.navLink} ${isActive('/guide')}`}>
+            Guide
           </Link>
         </nav>
 

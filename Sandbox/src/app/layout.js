@@ -14,10 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0f172a",
+};
+
 export const metadata = {
   title: {
-    default: "VitableTech | Machine Coding Sandbox",
-    template: "%s | VitableTech",
+    default: "FrontendForge | Machine Coding Sandbox",
+    template: "%s | FrontendForge",
   },
   description:
     "Practice real-world frontend interview questions with an interactive sandbox from VitableTech.",
@@ -30,7 +36,6 @@ export const metadata = {
     "vitabletech",
   ],
   authors: [{ name: "VitableTech" }],
-  viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "VitableTech | Machine Coding Sandbox",
     description:
@@ -67,8 +72,8 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
