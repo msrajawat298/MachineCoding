@@ -1,0 +1,32 @@
+.counter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.buttonGroup{
+    display: flex;
+    gap: 8px;
+}
+.incrementButton{
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--success);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+}
+.decrementButton{
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--error);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+}
