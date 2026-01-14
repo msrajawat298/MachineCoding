@@ -7,9 +7,10 @@ export default function Footer() {
       <div className={`container`}>
         <div className={styles.footerContent}>
           <div className={styles.footerBrand}>
-            <h3><span className="text-gradient">Vitable</span>Tech</h3>
+            <h3><span className="text-gradient">FrontendForge</span></h3>
             <p className={styles.footerSlogan}>
-              Empowering Businesses Through Open Source Innovation.
+              Forging Elite Frontend Engineers. <br/>
+              <span style={{fontSize: '0.8em', opacity: 0.7}}>Powered by VitableTech</span>
             </p>
           </div>
           
@@ -18,6 +19,7 @@ export default function Footer() {
             <ul className={styles.footerLinks}>
               <li><Link href="/exercises" className={styles.footerLink}>Exercises</Link></li>
               <li><Link href="/about" className={styles.footerLink}>About Us</Link></li>
+              <li><Link href="/guide" className={styles.footerLink}>Developer Guide</Link></li>
               <li><a href="https://blog.vitabletech.in/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Blog</a></li>
               <li><a href="https://github.com/msrajawat298/MachineCoding" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>GitHub Repo</a></li>
             </ul>

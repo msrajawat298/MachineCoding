@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DebounceDemo, ThrottleDemo } from "@/component/DebounceThrottleDemo";
+import DebounceDemo from "@/challenges/debounce";
+import ThrottleDemo from "@/challenges/throttle";
 
 export default function TodoApp() {
   const [items, setItems] = useState([]);

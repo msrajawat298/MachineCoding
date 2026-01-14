@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from './page.module.css';
 
 export default function Home() {
   const exercises = [
@@ -50,14 +51,9 @@ export default function Home() {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section style={{ 
-        position: 'relative', 
-        padding: '8rem 0', 
-        overflow: 'hidden',
-        background: 'radial-gradient(circle at top center, rgba(79, 70, 229, 0.15), transparent 40%)'
-      }}>
+      <section className={styles.heroSection}>
         <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center' }}>
-          <div style={{ 
+          <div className="animate-fade-in" style={{ 
             display: 'inline-block', 
             padding: '0.5rem 1rem', 
             borderRadius: '9999px', 
@@ -67,16 +63,16 @@ export default function Home() {
             marginBottom: '1.5rem',
             border: '1px solid rgba(79, 70, 229, 0.2)'
           }}>
-            Powered by VitableTech
+            A VitableTech Product
           </div>
-          <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-            Master <span className="text-gradient">Machine Coding</span> Interviews
+          <h1 className={`${styles.heroTitle} animate-slide-up`}>
+            Welcome to <span className="text-gradient">FrontendForge</span>
           </h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
+          <p className={`${styles.heroDescription} animate-slide-up-delay-1`}>
             Practice real-world frontend interview questions with our interactive sandbox. 
             Built to help you thrive in the digital world.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+          <div className={`${styles.heroButtons} animate-slide-up-delay-2`}>
             <Link href="/exercises" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
               Start Practicing
             </Link>
@@ -87,24 +83,13 @@ export default function Home() {
         </div>
         
         {/* Background Elements */}
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '100%',
-          height: '100%',
-          background: 'url("/grid.svg")', // We might need to create this or remove it
-          opacity: 0.05,
-          zIndex: 0,
-          pointerEvents: 'none'
-        }} />
+        <div className={`${styles.gridBackground} animate-float`} />
       </section>
 
       {/* Exercises Grid */}
-      <section style={{ padding: '4rem 0' }}>
+      <section className={styles.exercisesSection}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
+          <div className={styles.headerRow}>
             <div>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>Popular Exercises</h2>
               <p style={{ color: 'var(--text-secondary)' }}>Hand-picked challenges to sharpen your skills.</p>
@@ -114,11 +99,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', 
-            gap: '2rem' 
-          }}>
+          <div className={styles.exercisesGrid}>
             {exercises.map((ex) => (
               <Link href={`/exercises/${ex.slug}`} key={ex.slug} className="card" style={{ display: 'block', textDecoration: 'none' }}>
                 <div style={{ 

@@ -1,0 +1,13 @@
+.clock{
+    font-family: 'Arial', sans-serif;
+    color: var(--primary);
+    text-align: center;
+    padding: 10px;
+    background-color: var(--background-secondary);
+    border-radius: 5px;
+}
+.time{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--success);
+}
