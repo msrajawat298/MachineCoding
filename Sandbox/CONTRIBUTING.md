@@ -1,59 +1,55 @@
-# Contributing
+# Contributing to FrontendForge
 
-Thank you for contributing! This guide explains the preferred workflow, coding conventions, and checklist for adding components or exercises.
+First off, thanks for taking the time to contribute! 🎉
 
-## Workflow
+FrontendForge is built to help developers learn and master frontend machine coding. Your contributions help make this platform better for everyone.
 
-1. Fork or branch off the main branch.
-2. Create a branch with a descriptive name: `feat/<short-description>` or `fix/<short-description>`.
-3. Make changes in small, focused commits.
-4. Run the dev server locally and verify behavior.
-5. Open a pull request with a clear description and screenshots if UI changes are involved.
+## 📋 How to Contribute
 
-## Branching & PRs
+### 1. Reporting Bugs
+If you find a bug, please create a new issue on GitHub describing:
+- What happened?
+- What did you expect to happen?
+- Steps to reproduce the bug.
+- Screenshots (if applicable).
 
-- Base branches on `main`.
-- Use feature branches for new components or exercises.
-- Include a short description of the implementation and any steps to test in the PR body.
+### 2. Suggesting Enhancements
+New challenge ideas or feature suggestions are always welcome. Open an issue to discuss your idea before implementing it.
 
-## Coding conventions
+### 3. Submitting Pull Requests
+1. **Fork the repository** and clone it locally.
+2. Create a new branch for your feature or fix:
+   ```bash
+   git checkout -b feature/my-new-challenge
+   ```
+3. **Commit your changes**:
+   - Write clear, descriptive commit messages.
+   - Example: `feat: Add new Timer challenge` or `fix: Mobile layout in Sidebar`.
+4. **Push to your fork** and submit a Pull Request.
 
-- Add `"use client"` at the top of files that use hooks or browser APIs.
-- Name component folders in PascalCase and use an `index.jsx` file to export the component.
-- Keep components small and single-purpose.
-- Use module CSS (`*.module.css`) for component-scoped styles.
+---
 
-## File & export pattern
+## 💻 Development Workflow
 
-- Component folder example:
+### Adding a New Challenge
+Adding a new machine coding exercise is easy:
 
-```
-src/component/MyComponent/
-  index.jsx
-  MyComponent.module.css
-```
+1.  **Navigate to** `src/challenges/`.
+2.  **Create a new folder** with a kebab-case name (e.g., `infinite-scroll`).
+3.  **Create your component**:
+    - Add an `index.jsx` file inside your new folder.
+    - Export your main component as `default`.
+    - (Optional) Add CSS modules or other helper files in the same folder.
+4.  **Test it locally**:
+    - The sidebar will automatically pick up your new folder.
+    - Go to `http://localhost:3000/exercises/infinite-scroll` to see it in action.
 
-- Export default from `index.jsx` so consumers can import with `@/component/MyComponent`.
+### Code Style
+- Use **functional components** and React Hooks.
+- Prefer **CSS Modules** (`styles.module.css`) for component-specific styling to avoid collisions.
+- Keep components clean and modular.
 
-## Adding an exercise checklist
+---
 
-- [ ] Add folder under `src/app/exercises/<kebab-name>`
-- [ ] Add `page.js` that imports `ExerciseView` and the Demo component
-- [ ] If showing source code, use `getSourceCode` from `@/component/CodeBlock/CodeBlockServer`
-- [ ] Verify the exercise works in dev and looks good in the sidebar (if applicable)
-
-## Tests & verification
-
-- There are no automated tests in this repo by default. Manually verify changes by running `npm run dev` and checking the page.
-
-## Commit message style
-
-- Use short, imperative commit messages: `Add debounce demo` or `Fix todo item toggle`.
-
-## Style & linting
-
-- The project uses basic ESLint configuration. Run the linter and fix warnings before submitting a PR.
-
-## Questions
-
-If you're unsure about structure or design, open an issue or ask maintainers via the pull request comments.
+## ⚖️ License
+By contributing, you agree that your contributions will be licensed under its MIT License.

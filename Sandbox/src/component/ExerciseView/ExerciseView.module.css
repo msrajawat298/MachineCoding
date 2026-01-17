@@ -71,3 +71,31 @@
   overflow: auto;
   background: #1e1e1e; /* VS Code dark theme bg */
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .controls {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .controlBtn {
+    flex: 1;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

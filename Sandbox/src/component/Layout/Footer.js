@@ -17,6 +17,8 @@ export default function Footer() {
           <div className={styles.footerSection}>
             <h4>Resources</h4>
             <ul className={styles.footerLinks}>
+              <li><Link href="/" className={styles.footerLink}>Home</Link></li>
+              <li><Link href="/playground" className={styles.footerLink}>Playground</Link></li>
               <li><Link href="/exercises" className={styles.footerLink}>Exercises</Link></li>
               <li><Link href="/about" className={styles.footerLink}>About Us</Link></li>
               <li><Link href="/guide" className={styles.footerLink}>Developer Guide</Link></li>
