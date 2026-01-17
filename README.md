@@ -2,7 +2,7 @@
 
 **FrontendForge** is an advanced interactive platform designed to help developers master frontend machine coding challenges. It provides a realistic environment to practice common interview questions, complete with live demos, code reviews, and an in-browser IDE.
 
-![FrontendForge Banner](/public/logo.svg)
+![FrontendForge Banner](./Sandbox/public/logo.svg)
 
 ## 🚀 Features
 
