@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -72,20 +73,22 @@ export default function Home() {
             Practice real-world frontend interview questions with our interactive sandbox. 
             Built to help you thrive in the digital world.
           </p>
-          <div className={`${styles.heroButtons} animate-slide-up-delay-2`}>
-            <Link href="/exercises" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-              Start Practicing
-            </Link>
-            <Link href="/about" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-              Learn More
-            </Link>
-          </div>
+        <div className={styles.ctaGroup}>
+          <Link href="/exercises" className={styles.primaryButton}>
+            Start Coding &rarr;
+          </Link>
+          <Link href="/playground" className={styles.secondaryButton}>
+             ⚡ Try Playground
+          </Link>
+          <a href="https://github.com/vitabletech/FrontendForge" target="_blank" rel="noopener noreferrer" className={styles.secondaryButton}>
+            <Image src="/image.png" alt="GitHub" width={20} height={20} />
+            Star on GitHub
+          </a>
         </div>
-        
+        </div>
         {/* Background Elements */}
         <div className={`${styles.gridBackground} animate-float`} />
       </section>
-
       {/* Exercises Grid */}
       <section className={styles.exercisesSection}>
         <div className="container">

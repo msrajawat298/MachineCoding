@@ -25,6 +25,9 @@ export default function Header() {
           <Link href="/about" className={`${styles.navLink} ${isActive('/about')}`}>
             About
           </Link>
+          <Link href="/playground" className={`${styles.navLink} ${isActive('/playground')}`} style={{ color: '#10b981' }}>
+            ⚡ Playground
+          </Link>
           <Link href="/guide" className={`${styles.navLink} ${isActive('/guide')}`}>
             Guide
           </Link>

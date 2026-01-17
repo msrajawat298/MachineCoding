@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import CodeBlock from "@/component/CodeBlock";
+import CodeEditor from "@/component/CodeEditor";
+import SandpackPlayground from "@/component/Sandpack";
 import styles from "./ExerciseView.module.css";
 import Link from "next/link";
 
-const ExerciseView = ({ title, DemoComponent, sourceCode, demoProps }) => {
+const ExerciseView = ({ title, DemoComponent, sourceCode, sandboxFiles = {}, demoProps }) => {
   const [view, setView] = useState("demo"); // 'demo' or 'code'
 
   return (
@@ -30,24 +31,38 @@ const ExerciseView = ({ title, DemoComponent, sourceCode, demoProps }) => {
             >
               Source Code
             </button>
+            <button
+              className={`${styles.controlBtn} ${view === "playground" ? styles.controlBtnActive : ""}`}
+              onClick={() => setView("playground")}
+              style={{ borderColor: '#10b981', color: view === 'playground' ? '#10b981' : 'var(--text-secondary)' }}
+            >
+              ⚡ Playground
+            </button>
           </div>
         </div>
       </div>
 
       <div className={styles.content}>
-        {view === "demo" ? (
+        {view === "demo" && (
           <div className={styles.demoContainer}>
             <DemoComponent {...demoProps} />
           </div>
-        ) : (
-          <div className={styles.codeContainer}>
-            <CodeBlock sourceCode={sourceCode} />
+        )}
+
+        {view === "code" && (
+          <div className={styles.codeContainer} style={{ height: "600px", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", overflow: "hidden" }}>
+            <CodeEditor code={sourceCode} />
           </div>
         )}
+
+        <div style={{ display: view === "playground" ? "block" : "none", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", overflow: "hidden" }}>
+          <SandpackPlayground code={sourceCode} files={sandboxFiles} />
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default ExerciseView;
 
