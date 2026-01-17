@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import CodeBlock from "@/component/CodeBlock";
+import CodeEditor from "@/component/CodeEditor";
 import styles from "./ExerciseView.module.css";
 import Link from "next/link";
 
@@ -40,8 +40,8 @@ const ExerciseView = ({ title, DemoComponent, sourceCode, demoProps }) => {
             <DemoComponent {...demoProps} />
           </div>
         ) : (
-          <div className={styles.codeContainer}>
-            <CodeBlock sourceCode={sourceCode} />
+          <div className={styles.codeContainer} style={{ height: "600px", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", overflow: "hidden" }}>
+            <CodeEditor code={sourceCode} />
           </div>
         )}
       </div>
